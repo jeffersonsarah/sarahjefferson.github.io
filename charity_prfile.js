@@ -1,23 +1,20 @@
-<!-- HTML for the Volunteer button -->
-    
-      <button id="volunteerButton">Volunteer Now</button>
-      <div id="contactForm" style="display: none;">
-        <form id="volunteerForm">
-          <label for="nameInput">Name:</label>
-          <input type="text" id="nameInput" required><br>
-          <label for="emailInput">Email:</label>
-          <input type="email" id="emailInput" required><br>
-          <label for="CharityInput">Charity:</label>
-          <input type="description" id="descriptionInput" required><br>
-          <input type="submit" value="Submit">
-          
-        </form>
-      </div>
-      <div id="interactiveElement">
-        <!-- Your additional interactive element here -->
-      </div>
-      <script src="charity_profile.js"></script>
+const volunteerButton = document.getElementById('volunteerButton');
+const contactForm = document.getElementById('contactForm');
+const interactiveElement = document.getElementById('interactiveElement');
 
-<!-- Additional interactive element -->
-<div id="additionalElement">
-</div>
+// Event listener for Volunteer button
+volunteerButton.addEventListener('click', function() {
+  // Display contact form
+  contactForm.style.display = 'block';
+});
+
+// Additional interactive element
+const changeColorButton = document.createElement('button');
+changeColorButton.textContent = 'Change Color';
+changeColorButton.addEventListener('click', function() {
+  const randomColor = '#' + Math.floor(Math.random() * 16777215).toString(16);
+  interactiveElement.style.backgroundColor = randomColor;
+});
+
+// Append the additional interactive element
+interactiveElement.appendChild(changeColorButton);
