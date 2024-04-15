@@ -33,29 +33,8 @@
     They want your help to end hunger today in America. With your help we can get closer to ending hunger one dollar at a time.
   </p>
   
-  <button onclick="openModal()">
-    Help Now
-  </button>
-    
-    <div id="myModal">
-        <div>
-            <label for="info">Enter Information:</label>
-            <input type="text" id="info">
-            <button onclick="submitInfo()">Submit</button>
-        </div>
-    </div>
+   
 
-    <script>
-        function openModal() {
-            document.getElementById("myModal").style.display = "block";
-        }
-
-        function submitInfo() {
-            var enteredInfo = document.getElementById("info").value;
-            alert("Entered information: " + enteredInfo);
-            document.getElementById("myModal").style.display = "none";
-        }
-    </script>
   
   
   <h2>
@@ -78,31 +57,6 @@
   <p>
     The mission of Direct Reflief is to make the world more healthy. They believe that healthier poeple equal a better world.
   </p>
-  
-  
-  <button onclick="openModal()">
-    Help Now
-  </button>
-    
-    <div id="myModal">
-        <div>
-            <label for="info">Enter Information:</label>
-            <input type="text" id="info">
-            <button onclick="submitInfo()">Submit</button>
-        </div>
-    </div>
-
-    <script>
-        function openModal() {
-            document.getElementById("myModal").style.display = "block";
-        }
-
-        function submitInfo() {
-            var enteredInfo = document.getElementById("info").value;
-            alert("Entered information: " + enteredInfo);
-            document.getElementById("myModal").style.display = "none";
-        }
-    </script>
   
   
   
@@ -128,29 +82,28 @@
     The Salvation Army's mission is to grow small communities so that they have all of the resources that they need, that they might not have had before.
   </p>
   
-  
-  
-   <button onclick="openModal()">
-    Help Now
-  </button>
+  <!-- HTML for the Volunteer button -->
     
-    <div id="myModal">
-        <div>
-            <label for="info">Enter Information:</label>
-            <input type="text" id="info">
-            <button onclick="submitInfo()">Submit</button>
-        </div>
-    </div>
+      <button id="volunteerButton">Volunteer Now</button>
+      <div id="contactForm" style="display: none;">
+        <form id="volunteerForm">
+          <label for="nameInput">Name:</label>
+          <input type="text" id="nameInput" required><br>
+          <label for="emailInput">Email:</label>
+          <input type="email" id="emailInput" required><br>
+          <label for="CharityInput">Charity:</label>
+          <input type="description" id="descriptionInput" required><br>
+          <input type="submit" value="Submit">
+          
+        </form>
+      </div>
+      <div id="interactiveElement">
+        <!-- Your additional interactive element here -->
+      </div>
+      <script src="charity_profile.js"></script>
 
-    <script>
-        function openModal() {
-            document.getElementById("myModal").style.display = "block";
-        }
+<!-- Additional interactive element -->
+<div id="additionalElement">
+</div>
 
-        function submitInfo() {
-            var enteredInfo = document.getElementById("info").value;
-            alert("Entered information: " + enteredInfo);
-            document.getElementById("myModal").style.display = "none";
-        }
-    </script>
 </body>
